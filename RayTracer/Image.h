@@ -5,13 +5,12 @@
 class Image 
 { 
 public:
+	Image() = default;
+	Image(const std::string& filename, uint8_t alpha = 255);
+
 	bool Load(const std::string& filename, uint8_t alpha = 255); 
 	void Flip();
+
 	ColorBuffer colorBuffer;
 	friend class Framebuffer;
-
-//private:
-//	uint8_t* buffer;
-//	int width;
-//	int height;
 };
